@@ -1,26 +1,21 @@
 .title{
     text-align: center;
 }
-.email{
-    margin-left: 7%;
+.left{
+    margin-left: 40%;
+    display: block;
+    
 }
-.fName{
-    margin-left: 2%;
+.right{
+    display: block;
 }
-.tel{
-    margin-left: 3%; 
-}
-.lName{
-    margin-left: 5%;
-}
-.zip{
-    margin-left: 13%;
-}
-.form{
-    width: 30%;
+form{
+    background-color: grey;
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    padding: 40px;
     text-align: left;
     float: left;
-    margin-left: 35%;
     
-   
 }
