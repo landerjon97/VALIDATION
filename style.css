@@ -1,15 +1,10 @@
 .title{
     text-align: center;
 }
-.left{
-    margin-left: 40%;
-    display: block;
-    
-}
-.right{
-    display: block;
-}
+
+
 form{
+    text-align: center;
     background-color: grey;
     border-style: solid;
     border-color: black;
@@ -17,5 +12,7 @@ form{
     padding: 40px;
     text-align: left;
     float: left;
+    display: block;
+    column-count: 2;
     
 }
