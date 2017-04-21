@@ -16,10 +16,11 @@ pattern [A-Za-Z]-->
       Input Validation
     </h1>
       <form class="left">
-        <div>
+        <div class="left">
         First Name: 
         <input type ="text"
         id="fName"
+        pattern="[A-Za-z]"
         placeholder="First Name"
         class="fname"
         required/>
@@ -93,7 +94,7 @@ pattern [A-Za-Z]-->
           <option value="1968">1968</option>
         </select>
         </div>
-        <div>
+        <div class="right">
         Last Name: 
         <input type ="text"
         id="lName"
@@ -114,6 +115,8 @@ pattern [A-Za-Z]-->
         <input type ="text"
         id="soc"
         placeholder="Social Security"
+        pattern="[1-9]{3} +- [1-9]{2} +- [1-9] {4}"
+        title="Please use dashes"
         class="soc"
         required/>
         <br/>
@@ -124,7 +127,9 @@ pattern [A-Za-Z]-->
         placeholder="yearly income"
         class="income"
         required/>
+        <input type="submit" value="Submit">
         </div>
+        
       </form>
       
 
