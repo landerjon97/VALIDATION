@@ -1,6 +1,10 @@
 
 window.onload = function(){
-    var firstName = document.getElementById("fName");
+    validate();
+
+}
+function sub(){
+    var firstName = document.getElementById("fName").value;
     var lastName = document.getElementById("lName");
     var mail = document.getElementById("mail");
     var tel = document.getElementById("tel");
@@ -10,11 +14,9 @@ window.onload = function(){
     var incomeS = document.getElementById("income");
     var income = parseInt(incomeS);
     var x = document.getElementById("sub");
-    x.addEventListener("click", sub);
-
+    document.getElementById("leftBox").innerHTML = firstName;
 }
-function sub(){
-    
-    document.getElementById("leftBox").innerHTML = "First name = ", firstName;
-    
+function validate(){
+    var x = document.getElementById("sub");
+    x.addEventListener("click", sub);
 }
