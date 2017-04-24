@@ -11,6 +11,7 @@ pattern [A-Za-Z]-->
     
     <link href="style.css" type="text/css"
       rel="stylesheet">
+    <script src="script.js"></script>
   </head>
   <body>
     <h1 class="title">
@@ -21,8 +22,8 @@ pattern [A-Za-Z]-->
         First Name: 
         <input type ="text"
         id="fName"
-        pattern="[A-Za-z]"
-        placeholder="First Name"
+        pattern="[A-Za-z]{2,20}"
+        placeholder="Ex: Billy"
         class="fname"
         required/>
 
@@ -30,7 +31,7 @@ pattern [A-Za-Z]-->
         E-mail:     
         <input type ="email"
         id="mail"
-        placeholder="E-mail"
+        placeholder="Ex: you@somewhere.com"
         class="email"
         required/>
 
@@ -39,7 +40,7 @@ pattern [A-Za-Z]-->
         <input type ="tel"
         id="tel"
         pattern="[1-9]{3}+-[1-9]{3}+-[1-9]{4}"
-        placeholder="Telephone"
+        placeholder="Ex: 123-456-7890"
         class="tel"
         title="please enter properly"
         required/>
@@ -95,11 +96,15 @@ pattern [A-Za-Z]-->
           <option value="1968">1968</option>
         </select>
         </div>
+        <br/>
+        <br/>
+        <div id="leftBox" class="box"></div>
         <div class="right">
         Last Name: 
         <input type ="text"
         id="lName"
-        placeholder="Last Name"
+        pattern="[A-Za-z]{2,20}"
+        placeholder="Ex: Smith"
         class="lname"
         required/>
         <br/>
@@ -107,7 +112,8 @@ pattern [A-Za-Z]-->
         Zip:     
         <input type ="text"
         id="zip"
-        placeholder="Zip"
+        patter="[0-9]{1,8}"
+        placeholder="Ex: 12345"
         class="zip"
         required/>
         <br/>
@@ -115,8 +121,8 @@ pattern [A-Za-Z]-->
         Social Security: 
         <input type ="text"
         id="soc"
-        placeholder="Social Security"
-        pattern="[1-9]{3} +- [1-9]{2} +- [1-9] {4}"
+        placeholder="Ex: 123-45-6789"
+        pattern="[0-9]{3}+-[0-9]{2}+-[0-9]{4}"
         title="Please use dashes"
         class="soc"
         required/>
@@ -125,11 +131,18 @@ pattern [A-Za-Z]-->
         Income: 
         <input type ="text"
         id="income"
+        pattern="[1-9]{0,6}"
         placeholder="yearly income"
+        title="Values over 9,999,999 are not allowed"
         class="income"
         required/>
-        <input type="submit" value="Submit">
+        <br/>
+        <input type="submit" value="Submit" id="submit">
+        <button id="sub"> enter </button>
         </div>
+        <br/>
+        
+        <div id="rightBox" class="box"> </div>
         
       </form>
       
