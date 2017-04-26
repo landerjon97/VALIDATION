@@ -49,3 +49,18 @@ function validate(){
     var x = document.getElementById("sub");
     x.addEventListener("click", sub);
 }
+/*jquery
+    download jquery
+    $sign means jquery
+    ex: $(document).ready(function(){
+        $('#clear').bind("click",function())
+    })
+    basic syntacts 
+    $ degine access jquery
+    a (selector) to query or find html elements
+    A jQuery action() to performed on the elements
+    +$("#number").val() + is shortcut for parseInt
+    $("#showHide").click(function(){
+        $(#pic).toggle(4000);
+    })
+*/
