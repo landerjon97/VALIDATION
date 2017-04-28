@@ -17,7 +17,7 @@ pattern [A-Za-Z]-->
     <h1 class="title">
       Input Validation
     </h1>
-      <form class="left">
+      <form class="left" id="form">
         <div class="left">
         First Name: 
         <input type ="text"
@@ -39,7 +39,7 @@ pattern [A-Za-Z]-->
         Telephone: 
         <input type ="tel"
         id="tel"
-        pattern="[1-9]{3}+-[1-9]{3}+-[1-9]{4}"
+        pattern="[0-9]{3}([-])[0-9]{3}([-])[0-9]{4}"
         placeholder="Ex: 123-456-7890"
         class="tel"
         title="please enter properly"
@@ -123,7 +123,7 @@ pattern [A-Za-Z]-->
         <input type ="text"
         id="soc"
         placeholder="Ex: 123-45-6789"
-        pattern="[0-9]{3}+-[0-9]{2}+-[0-9]{4}"
+        pattern="[0-9]{3}([-])[0-9]{2}([-])[0-9]{4}"
         title="Please use dashes"
         class="soc"
         required/>
@@ -132,18 +132,19 @@ pattern [A-Za-Z]-->
         Income: 
         <input type ="text"
         id="income"
-        pattern="[1-9]{0,6}"
+        pattern="[0-9]{0,6}"
         placeholder="yearly income"
         title="Values over 9,999,999 are not allowed"
         class="income"
         required/>
         <br/>
         <button type="button" id="sub"> Submit </button>
+        <button type="button" class="clear" id="clear"> Clear </button>
+        <button type="button" class="fill" id="fill"> Fill </button>
         </div>
         <br/>
         
         <div id="rightBox" class="boxRight"> </div>
-        
       </form>
       
 
