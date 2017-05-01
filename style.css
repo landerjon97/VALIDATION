@@ -1,9 +1,21 @@
+/*
+By: Jonathan Lander
+Purpose: Make a tax calculator
+Class: CIS 270
+Date: 5/1/17
+*/
+
 .title{
-    text-align: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    width: 30%;
 }
 
 
 form{
+    margin-left: 35%;
+    margin-right: 35%;
+    width: 30%;
     text-align: center;
     background-color: grey;
     border-style: solid;

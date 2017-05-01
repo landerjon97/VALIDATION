@@ -1,10 +1,20 @@
-
+/*
+By: Jonathan Lander
+Purpose: Make a tax calculator
+Class: CIS 270
+Date: 5/1/17
+*/
 window.onload = function(){
+    //moving to a function calced validate
     validate();
 
 }
+//sub tests validity and calculator taxes and displays
 function sub(){
     if(document.getElementById("form").checkValidity() == true){
+        //how i go to a different way page window.open will open a new tab
+        onclick=window.open("https://www.example.org");
+        //storing value of what user inputs
         var firstName = document.getElementById("fName").value;
         var lastName = document.getElementById("lName").value;
         var mail = document.getElementById("mail").value;
@@ -13,10 +23,12 @@ function sub(){
         var zip= document.getElementById("zip").value;
         var soc = document.getElementById("soc").value;
         var incomeS = document.getElementById("income").value;
+        //parsing income
         var income = parseInt(incomeS);
         var x = document.getElementById("sub");
         var tax;
         var netIncome;
+        //calculating tax with wyatts rules
         if(income <= 20000 && income >= 0){
             tax = income * .1;
             netIncome = income - (income * .1);
@@ -39,29 +51,33 @@ function sub(){
             income += 21500;
         
         }
+        //displaying the calculations and what user inputs
         document.getElementById("leftBox").innerHTML = "First name: "+firstName +"<br/> Last Name:"
         +lastName + "<br/>E-mail: "+ mail + "<br/>Phone: "+ tel + "<br/>SSN: " + soc + "<br/>YOB: " + bDay + "<br/> Income: "
         + income.toFixed(2) + "<br/>Tax: " + tax.toFixed(2) + "<br/> Net Income: " + netIncome.toFixed(2);
         
-
+        //displaying the rules
         document.getElementById("rightBox").innerHTML = "Tax Rate Calculated from Income: <br/><br/> 1.    10% of amount between $0 - 20,000.00 <br/><br/>2.20% of amount between $20,000.01 - 50,000.00 + 2,000(from line 1)<br/><br/>3.    25% of amount between $50,000.01 - 100,000.00 + 6,000(from line 2)  + 2,000(from line 1)<br/><br/>4.    30% of amount between $100,000.01 - 500,000.00 + 12,500(from line 3) + 6,000(from line 2) + 2,000(from line 1)<br/><br/>If income is over $500,000 = 1% flat rate on all income.  :) The 1%"
     }
 }
 function clear(){
- document.getElementById("form").reset();
+    //clears form
+    document.getElementById("form").reset();
 }
 function fill(){
-        
-        var firstName = document.getElementById("fName").value = "Billy";
-        var lastName = document.getElementById("lName").value = "Smith";
-        var mail = document.getElementById("mail").value = "test@gmail.com";
-        var tel = document.getElementById("tel").value = "123-456-7890";
-        var bDay = document.getElementById("bYear").value = "1990";
-        var zip= document.getElementById("zip").value = "12345";
-        var soc = document.getElementById("soc").value = "123-45-6789";
-        var incomeS = document.getElementById("income").value = "10000";
+    //filling with apropraite inputs
+    var firstName = document.getElementById("fName").value = "Billy";
+    var lastName = document.getElementById("lName").value = "Smith";
+    var mail = document.getElementById("mail").value = "test@gmail.com";
+    var tel = document.getElementById("tel").value = "123-456-7890";
+    var bDay = document.getElementById("bYear").value = "1990";
+    var zip= document.getElementById("zip").value = "12345";
+    var soc = document.getElementById("soc").value = "123-45-6789";
+    var incomeS = document.getElementById("income").value = "10000";
 }
 function validate(){
+    //I assign on click listenered to see if any buttons are presesed and go to
+    //appropraite method
     var x = document.getElementById("sub");
     x.addEventListener("click", sub);
     var fillform = document.getElementById("fill");
